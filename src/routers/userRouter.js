@@ -19,7 +19,7 @@ router.post('/user', async (req, res) => {
 
   try {
     const user = await User.findOne({ userId });
-    await user.populate('favorites');
+    if (user.favorites?.length > 0) await user.populate('favorites');
     res.send(user);
   } catch (err) {
     res.status(500).send(err.message);

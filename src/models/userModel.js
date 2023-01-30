@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
   {
-    userId: { type: String, required: true, uniqe: true },
+    userId: { type: String, unique: true, required: true },
     favorites: [
       {
         type: mongoose.Schema.Types.ObjectId,

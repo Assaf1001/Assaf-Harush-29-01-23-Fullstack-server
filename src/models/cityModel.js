@@ -2,9 +2,6 @@ import mongoose from 'mongoose';
 
 const citySchema = new mongoose.Schema(
   {
-    // _id: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    // },
     key: {
       type: String,
       required: true,
